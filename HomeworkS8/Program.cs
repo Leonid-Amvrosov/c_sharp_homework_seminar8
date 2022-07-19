@@ -25,7 +25,7 @@
                 }
                 else
                 {
-                    Console.WriteLine("\nPROGRAM IS OVER!\n");
+                    Console.WriteLine("\n\nPROGRAM IS OVER!\n");
                 }
             }
             catch

@@ -73,6 +73,18 @@ namespace Homework
             }
             return list.IndexOf(list.Min());
         }
-
+        /// <summary>Метод создает новую матрицу произведения элементов двух предыдущих матриц.</summary>
+        public static int[,] MultiMatrix(int[,] array1, int[,] array2)
+        {
+            int[,] multArray = new int[array1.GetLength(0), array1.GetLength(1)];
+            for (int i = 0; i < array1.GetLength(0); i++)
+            {
+                for (int j = 0; j < array1.GetLength(1); j++)
+                {
+                    multArray[i, j] = array1[i, j] * array2[i, j];
+                }
+            }
+            return multArray;
+        }
     }
 }

@@ -31,9 +31,14 @@ namespace Homework
         /// <summary>Метод запускает в консоли решение задачи 58</summary>
         public static void Task58Sol()
         {
-            int[,] array = Methods.AskSizeCreateArray();
-            Methods.FillArray(array);
-            Methods.PrintArray(array);
+            int[,] array1 = Methods.AskSizeCreateArray();
+            Methods.FillArray(array1);
+            Methods.PrintArray(array1);
+            int[,] array2 = new int[array1.GetLength(0), array1.GetLength(1)];
+            Methods.FillArray(array2);
+            Methods.PrintArray(array2);
+            Methods.PrintArray(Methods.MultiMatrix(array1, array2));
+            Console.WriteLine();
         }
     }
 }
