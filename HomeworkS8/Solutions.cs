@@ -6,16 +6,27 @@ namespace Homework
         public static void Task54Sol()
         {
             int[,] array = Methods.AskSizeCreateArray();
-            Methods.FillArray(array);
-            Methods.PrintArray(array);
-            Methods.SortInLineArray(array);
-            Methods.PrintArray(array);
+            if (array.GetLength(0) == 0 || array.GetLength(1) == 0)
+            {
+                Console.WriteLine("Incorrect size! Try to enter positive numbers!");
+            }
+            else
+            {
+                Methods.FillArray(array);
+                Methods.PrintArray(array);
+                Methods.SortInLineArray(array);
+                Methods.PrintArray(array);
+            }
         }
         /// <summary>Метод запускает в консоли решение задачи 56</summary>
         public static void Task56Sol()
         {
             int[,] array = Methods.AskSizeCreateArray();
-            if (array.GetLength(0) == array.GetLength(1))
+            if (array.GetLength(0) == 0 || array.GetLength(1) == 0)
+            {
+                Console.WriteLine("Incorrect size! Try to enter positive numbers!");
+            }
+            else if (array.GetLength(0) == array.GetLength(1))
             {
                 Console.WriteLine("\nYOU MUST ENTER RECTANGULAR ARRAY SIZE!(ROWS MUST NOT BE EQUAL TO COLUMNS)\n");
                 Task56Sol();
@@ -32,19 +43,30 @@ namespace Homework
         public static void Task58Sol()
         {
             int[,] array1 = Methods.AskSizeCreateArray();
-            Methods.FillArray(array1);
-            Methods.PrintArray(array1);
-            int[,] array2 = new int[array1.GetLength(0), array1.GetLength(1)];
-            Methods.FillArray(array2);
-            Methods.PrintArray(array2);
-            Methods.PrintArray(Methods.MultiMatrix(array1, array2));
-            Console.WriteLine();
+            if (array1.GetLength(0) == 0 || array1.GetLength(1) == 0)
+            {
+                Console.WriteLine("Incorrect size! Try to enter positive numbers!");
+            }
+            else
+            {
+                Methods.FillArray(array1);
+                Methods.PrintArray(array1);
+                int[,] array2 = new int[array1.GetLength(0), array1.GetLength(1)];
+                Methods.FillArray(array2);
+                Methods.PrintArray(array2);
+                Methods.PrintArray(Methods.MultiMatrix(array1, array2));
+                Console.WriteLine();
+            }
         }
         /// <summary>Метод запускает в консоли решение задачи 60</summary>
         public static void Task60Sol()
         {
             int[,,] array = Methods.AskSizeCreate3DArray();
-            if (array.GetLength(0) * array.GetLength(1) * array.GetLength(2) > 90)
+            if (array.GetLength(0) == 0 || array.GetLength(1) == 0 || array.GetLength(2) == 0)
+            {
+                Console.WriteLine("Incorrect size! Try to enter positive numbers!");
+            }
+            else if (array.GetLength(0) * array.GetLength(1) * array.GetLength(2) > 90)
             {
                 Console.WriteLine("Too big for unique two digit numbers! Try to enter smaller values!");
             }
@@ -59,8 +81,15 @@ namespace Homework
         {
             int value = 1;
             int[,] array = Methods.AskSizeCreateArray();
-            Methods.SpiralFillArray(array, value);
-            Methods.PrintArray(array);
+            if (array.GetLength(0) == 0 || array.GetLength(1) == 0)
+            {
+                Console.WriteLine("Incorrect size! Try to enter positive numbers!");
+            }
+            else
+            {
+                Methods.SpiralFillArray(array, value);
+                Methods.PrintArray(array);
+            }
         }
     }
 }
