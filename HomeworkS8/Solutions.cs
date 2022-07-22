@@ -40,5 +40,27 @@ namespace Homework
             Methods.PrintArray(Methods.MultiMatrix(array1, array2));
             Console.WriteLine();
         }
+        /// <summary>Метод запускает в консоли решение задачи 60</summary>
+        public static void Task60Sol()
+        {
+            int[,,] array = Methods.AskSizeCreate3DArray();
+            if (array.GetLength(0) * array.GetLength(1) * array.GetLength(2) > 90)
+            {
+                Console.WriteLine("Too big for unique two digit numbers! Try to enter smaller values!");
+            }
+            else
+            {
+                Methods.RandomFill3DArray(array);
+                Methods.Print3DArray(array);
+            }
+        }
+        /// <summary>Метод запускает в консоли решение задачи 62</summary>
+        public static void Task62Sol()
+        {
+            int value = 1;
+            int[,] array = Methods.AskSizeCreateArray();
+            Methods.SpiralFillArray(array, value);
+            Methods.PrintArray(array);
+        }
     }
 }

@@ -23,6 +23,16 @@
                     Text.Task58();
                     Solutions.Task58Sol();
                 }
+                else if (input.Key == ConsoleKey.D4)
+                {
+                    Text.Task60();
+                    Solutions.Task60Sol();
+                }
+                else if (input.Key == ConsoleKey.D5)
+                {
+                    Text.Task62();
+                    Solutions.Task62Sol();
+                }
                 else
                 {
                     Console.WriteLine("\n\nPROGRAM IS OVER!\n");
